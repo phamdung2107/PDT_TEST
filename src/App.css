@@ -10,19 +10,24 @@ body {
 
 .container {
   margin: 100px auto;
-  width: 688px;
+  width: 900px;
 }
 
-#write {
+.write {
   margin: 0 0 5px;
   padding: 5px;
-  width: 671px;
+  width: 100%;
   height: 200px;
   font: 1em/1.5 Verdana, Sans-Serif;
   background: #fff;
   border: 1px solid #f9f9f9;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+}
+
+.right{
+  float: right;    
+  margin-top: -235px !important;
 }
 
 .keyboard {
@@ -43,7 +48,8 @@ body {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
 }
-
+.ctrl,
+.num,
 .capslock,
 .tab,
 .left-shift {
@@ -52,7 +58,7 @@ body {
 
 .keyboard .tab,
 .keyboard .delete {
-  width: 70px;
+  width: 86px;
 }
 
 .keyboard .capslock {
@@ -60,7 +66,7 @@ body {
 }
 
 .keyboard .return {
-  width: 77px;
+  width: 92px;
 }
 
 .keyboard .left-shift {
@@ -68,7 +74,20 @@ body {
 }
 
 .keyboard .right-shift {
-  width: 109px;
+  width: 122px;
+}
+
+.height{
+  height: 85px !important;
+  line-height: 80px !important;
+}
+
+.wid{
+  width: 86px !important;
+}
+
+.mt45{
+  margin-top: -45px !important;
 }
 
 .lastitem {
@@ -80,8 +99,7 @@ body {
 }
 
 .keyboard .space {
-  clear: left;
-  width: 681px;
+  width: 327px;
 }
 
 .on {
