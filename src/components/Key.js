@@ -34,7 +34,7 @@ function Key({ index, item, onPayload }) {
       >
         <span>{ item.name }</span>
         {item.name2 ? (
-          <span >{item.name2}</span>
+          <span className="key2">{item.name2}</span>
         ) : ""}
       </li>
     </>

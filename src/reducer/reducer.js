@@ -1,5 +1,15 @@
 import { keyData } from "../data";
-import { handleActionAction, handleBackspaceAction, handleCapslockAction, handleEnterAction, handleKeyAction, handleNumlockAction, handleShiftAction, handleSpaceAction, handleTabAction } from "./actions";
+import {
+  handleActionAction,
+  handleBackspaceAction,
+  handleCapslockAction,
+  handleEnterAction,
+  handleKeyAction,
+  handleNumlockAction,
+  handleShiftAction,
+  handleSpaceAction,
+  handleTabAction,
+} from "./actions";
 import { stateInterface, actionInterface } from "./constants";
 
 export const stateInit = {
