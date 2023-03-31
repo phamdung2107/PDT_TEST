@@ -1,10 +1,30 @@
+import { useMemo, useState } from "react";
 import "./App.css";
-import Button from "./components/Keyboard";
+import Keyboard from "./components/Keyboard";
+import SoundButton from "./components/SoundButton";
+import SoundContext from "./context/soundContext";
 
 function App() {
+  const [isSoundOn, setIsSoundOn] = useState(true);
+
+  const toggleSound = () => {
+    setIsSoundOn((prev) => !prev);
+  };
+
+  const soundValue = useMemo(
+    () => ({
+      isSoundOn,
+      toggleSound,
+    }),
+    [isSoundOn]
+  );
+
   return (
     <div className="container">
-      <Button />
+      <SoundContext.Provider value={soundValue}>
+        <Keyboard />
+        <SoundButton />
+      </SoundContext.Provider>
     </div>
   );
 }
