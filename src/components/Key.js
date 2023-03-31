@@ -32,13 +32,10 @@ function Key({ index, item, onPayload }) {
         className={CssItem(item.className, item.pressed, item.onDown)}
         onClick={handleKeyPress}
       >
-        {item.children ? (
-          <>
-          {item.children.map((childrenItem,index)=>(
-            <span key={index} className={childrenItem.className}>{childrenItem.name}</span>
-          ))}
-        </>
-        ) :item.name}
+        <span>{ item.name }</span>
+        {item.name2 ? (
+          <span >{item.name2}</span>
+        ) : ""}
       </li>
     </>
   );

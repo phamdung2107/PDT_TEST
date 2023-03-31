@@ -125,16 +125,7 @@ export const keyData = [
     onDown: false,
     pressed: false,
     className: "symbol ctrl",
-    children:[
-      {
-        name: '~',
-        className: "on",
-      },
-      {
-        name: '`',
-        className: "off",
-      }
-    ]
+    name2:'~',
   },
   {
     name: "1",
@@ -142,16 +133,7 @@ export const keyData = [
     onDown: false,
     pressed: false,
     className: "symbol",
-    children:[
-      {
-        name: '!',
-        className: "on",
-      },
-      {
-        name: '1',
-        className: "off",
-      }
-    ]
+    name2:'!',
   },
   {
     name: "2",
@@ -159,16 +141,7 @@ export const keyData = [
     onDown: false,
     pressed: false,
     className: "symbol",
-    children:[
-      {
-        name: '@',
-        className: "on",
-      },
-      {
-        name: '2',
-        className: "off",
-      }
-    ]
+    name2:'@',
   },
   {
     name: "3",
@@ -176,16 +149,7 @@ export const keyData = [
     onDown: false,
     pressed: false,
     className: "symbol",
-    children:[
-      {
-        name: '#',
-        className: "on",
-      },
-      {
-        name: '3',
-        className: "off",
-      }
-    ]
+    name2:'#',
   },
   {
     name: "4",
@@ -193,16 +157,7 @@ export const keyData = [
     onDown: false,
     pressed: false,
     className: "symbol",
-    children:[
-      {
-        name: '$',
-        className: "on",
-      },
-      {
-        name: '4',
-        className: "off",
-      }
-    ]
+    name2:'$',
   },
   {
     name: "5",
@@ -210,16 +165,7 @@ export const keyData = [
     onDown: false,
     pressed: false,
     className: "symbol",
-    children:[
-      {
-        name: '%',
-        className: "on",
-      },
-      {
-        name: '5',
-        className: "off",
-      }
-    ]
+    name2:'%',
   },
   {
     name: "6",
@@ -227,16 +173,7 @@ export const keyData = [
     onDown: false,
     pressed: false,
     className: "symbol",
-    children:[
-      {
-        name: '^',
-        className: "on",
-      },
-      {
-        name: '6',
-        className: "off",
-      }
-    ]
+    name2:'^',
   },
   {
     name: "7",
@@ -244,16 +181,7 @@ export const keyData = [
     onDown: false,
     pressed: false,
     className: "symbol",
-    children:[
-      {
-        name: '&',
-        className: "on",
-      },
-      {
-        name: '7',
-        className: "off",
-      }
-    ]
+    name2:'&',
   },
   {
     name: "8",
@@ -261,16 +189,7 @@ export const keyData = [
     onDown: false,
     pressed: false,
     className: "symbol",
-    children:[
-      {
-        name: '*',
-        className: "on",
-      },
-      {
-        name: '8',
-        className: "off",
-      }
-    ]
+    name2:'*',
   },
   {
     name: "9",
@@ -278,16 +197,7 @@ export const keyData = [
     onDown: false,
     pressed: false,
     className: "symbol",
-    children:[
-      {
-        name: '(',
-        className: "on",
-      },
-      {
-        name: '9',
-        className: "off",
-      }
-    ]
+    name2:'(',
   },
   {
     name: "0",
@@ -295,16 +205,7 @@ export const keyData = [
     onDown: false,
     pressed: false,
     className: "symbol",
-    children:[
-      {
-        name: ')',
-        className: "on",
-      },
-      {
-        name: '0',
-        className: "off",
-      }
-    ]
+    name2:')',
   },
   {
     name: "-",
@@ -312,16 +213,7 @@ export const keyData = [
     onDown: false,
     pressed: false,
     className: "symbol",
-    children:[
-      {
-        name: '_',
-        className: "on",
-      },
-      {
-        name: '-',
-        className: "off",
-      }
-    ]
+    name2:'_',
   },
   {
     name: "=",
@@ -329,16 +221,7 @@ export const keyData = [
     onDown: false,
     pressed: false,
     className: "symbol",
-    children:[
-      {
-        name: '+',
-        className: "on",
-      },
-      {
-        name: '=',
-        className: "off",
-      }
-    ]
+    name2:'+',
   },
   {
     name: "Backspace",
@@ -432,16 +315,7 @@ export const keyData = [
     onDown: false,
     pressed: false,
     className: "symbol",
-    children:[
-      {
-        name: '{',
-        className: "on",
-      },
-      {
-        name: '[',
-        className: "off",
-      }
-    ]
+    name2:'{',
   },
   {
     name: "]",
@@ -449,16 +323,7 @@ export const keyData = [
     onDown: false,
     pressed: false,
     className: "symbol",
-    children:[
-      {
-        name: '}',
-        className: "on",
-      },
-      {
-        name: ']',
-        className: "off",
-      }
-    ]
+    name2:'}',
   },
   {
     name: "\\",
@@ -466,16 +331,7 @@ export const keyData = [
     onDown: false,
     pressed: false,
     className: "symbol lastitem",
-    children:[
-      {
-        name: '|',
-        className: "on",
-      },
-      {
-        name: '\\',
-        className: "off",
-      }
-    ]
+    name2:'|',
   },
   {
     name: "Caps Lock",
@@ -554,16 +410,7 @@ export const keyData = [
     onDown: false,
     pressed: false,
     className: "symbol",
-    children:[
-      {
-        name: ':',
-        className: "on",
-      },
-      {
-        name: ';',
-        className: "off",
-      }
-    ]
+    name2:':',
   },
   {
     name: "'",
@@ -571,16 +418,7 @@ export const keyData = [
     onDown: false,
     pressed: false,
     className: "symbol",
-    children:[
-      {
-        name: '"',
-        className: "on",
-      },
-      {
-        name: '\'',
-        className: "off",
-      }
-    ]
+    name2:'"',
   },
   {
     name: "Enter",
@@ -653,16 +491,7 @@ export const keyData = [
     onDown: false,
     pressed: false,
     className: "symbol",
-    children:[
-      {
-        name: '<',
-        className: "on",
-      },
-      {
-        name: ',',
-        className: "off",
-      }
-    ]
+    name2:'<',
   },
   {
     name: ".",
@@ -670,16 +499,7 @@ export const keyData = [
     onDown: false,
     pressed: false,
     className: "symbol",
-    children:[
-      {
-        name: '>',
-        className: "on",
-      },
-      {
-        name: '.',
-        className: "off",
-      }
-    ]
+    name2:'>',
   },
   {
     name: "/",
@@ -687,16 +507,7 @@ export const keyData = [
     onDown: false,
     pressed: false,
     className: "symbol",
-    children:[
-      {
-        name: '?',
-        className: "on",
-      },
-      {
-        name: '/',
-        className: "off",
-      }
-    ]
+    name2:'?',
   },
   {
     name: "Shift",
