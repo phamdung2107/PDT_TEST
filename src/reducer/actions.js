@@ -11,7 +11,7 @@ const textLogger = (old_text, new_key, specialKey) => {
   return `${old_text}${new_key}`;
 };
 
-export const handleKeyAction = (state, action, newkey) => {
+export const handleKeyAction = (state, newkey, action) => {
   const key =
     (state.specialKey.shift && newkey[action.payload].name2) ||
     newkey[action.payload].name;
@@ -27,7 +27,7 @@ export const handleKeyAction = (state, action, newkey) => {
   };
 };
 
-export const handleActionAction = (state, action, newkey) => {
+export const handleActionAction = (state, newkey, action) => {
   return {
     ...state,
     keys: newkey,
@@ -35,7 +35,7 @@ export const handleActionAction = (state, action, newkey) => {
   };
 };
 
-export const handleCapslockAction = (state, action, newkey) => {
+export const handleCapslockAction = (state, newkey, action) => {
   return {
     ...state,
     keys: newkey,
@@ -47,7 +47,7 @@ export const handleCapslockAction = (state, action, newkey) => {
   };
 };
 
-export const handleShiftAction = (state, action, newkey) => {
+export const handleShiftAction = (state, newkey, action) => {
   return {
     ...state,
     keys: newkey,
@@ -59,8 +59,8 @@ export const handleShiftAction = (state, action, newkey) => {
   };
 };
 
-export const handleNumlockAction = (state, action, newkey) => {
-  if (numberRights.includes(action.payload) && state.specialKey.numlock === false) {
+export const handleNumlockAction = (state, newkey, action) => {
+  if (numberRights.includes(action.payload) && !state.specialKey.numlock) {
     return state;
   }
   return {
@@ -74,7 +74,7 @@ export const handleNumlockAction = (state, action, newkey) => {
   };
 };
 
-export const handleSpaceAction = (state, action, newkey) => {
+export const handleSpaceAction = (state, newkey, action) => {
   return {
     ...state,
     keys: newkey,
@@ -83,7 +83,7 @@ export const handleSpaceAction = (state, action, newkey) => {
   };
 };
 
-export const handleTabAction = (state, action, newkey) => {
+export const handleTabAction = (state, newkey, action) => {
   return {
     ...state,
     keys: newkey,
@@ -92,7 +92,7 @@ export const handleTabAction = (state, action, newkey) => {
   };
 };
 
-export const handleEnterAction = (state, action, newkey) => {
+export const handleEnterAction = (state, newkey, action) => {
   return {
     ...state,
     keys: newkey,
@@ -101,7 +101,7 @@ export const handleEnterAction = (state, action, newkey) => {
   };
 };
 
-export const handleBackspaceAction = (state, action, newkey) => {
+export const handleBackspaceAction = (state, newkey, action) => {
   return {
     ...state,
     keys: newkey,

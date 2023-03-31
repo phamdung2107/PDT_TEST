@@ -23,6 +23,7 @@ function Keyboard() {
         rows="6"
         cols="60"
         defaultValue={data.text}
+        readOnly
       ></textarea>
       <ul className="keyboard">
         {data?.keys

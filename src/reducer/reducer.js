@@ -1,15 +1,5 @@
 import { keyData } from "../data";
-import {
-  handleActionAction,
-  handleBackspaceAction,
-  handleCapslockAction,
-  handleEnterAction,
-  handleKeyAction,
-  handleNumlockAction,
-  handleShiftAction,
-  handleSpaceAction,
-  handleTabAction,
-} from "./actions";
+import { handleActionAction, handleBackspaceAction, handleCapslockAction, handleEnterAction, handleKeyAction, handleNumlockAction, handleShiftAction, handleSpaceAction, handleTabAction } from "./actions";
 import { stateInterface, actionInterface } from "./constants";
 
 export const stateInit = {
@@ -25,6 +15,18 @@ export const stateInit = {
   },
 };
 
+const actions = {
+  key: handleKeyAction,
+  action: handleActionAction,
+  capslock: handleCapslockAction,
+  shift: handleShiftAction,
+  numlock: handleNumlockAction,
+  space: handleSpaceAction,
+  tab: handleTabAction,
+  enter: handleEnterAction,
+  backspace: handleBackspaceAction,
+};
+
 export const reducer = (
   state: stateInterface,
   action: actionInterface = "key"
@@ -37,18 +39,6 @@ export const reducer = (
     pressed: true,
   };
 
-  const actions = {
-    key: handleKeyAction,
-    action: handleActionAction,
-    capslock: handleCapslockAction,
-    shift: handleShiftAction,
-    numlock: handleNumlockAction,
-    space: handleSpaceAction,
-    tab: handleTabAction,
-    enter: handleEnterAction,
-    backspace: handleBackspaceAction,
-  };
-
   const handler = actions[action.type] || ((state) => state);
-  return handler(state, action, newkey);
+  return handler(state, newkey, action);
 };
