@@ -9,6 +9,7 @@ import {
   handleShiftAction,
   handleSpaceAction,
   handleTabAction,
+  numberRights,
 } from "./actions";
 import { stateInterface, actionInterface } from "./constants";
 
@@ -48,6 +49,9 @@ export const reducer = (
     onDown: true,
     pressed: true,
   };
+  if (numberRights.includes(action.payload) && !state.specialKey.numlock) {
+    return state;
+  }
 
   const handler = actions[action.type] || ((state) => state);
   return handler(state, newkey, action);

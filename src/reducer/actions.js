@@ -1,4 +1,4 @@
-const numberRights = [...Array(12).keys()]
+export const numberRights = [...Array(12).keys()]
   .map((i) => i + 83)
   .filter((item) => item !== 86 && item !== 93);
 
@@ -60,9 +60,6 @@ export const handleShiftAction = (state, newkey, action) => {
 };
 
 export const handleNumlockAction = (state, newkey, action) => {
-  if (numberRights.includes(action.payload) && !state.specialKey.numlock) {
-    return state;
-  }
   return {
     ...state,
     keys: newkey,
