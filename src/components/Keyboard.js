@@ -1,696 +1,200 @@
 import Key from "./Key";
+import { keyData } from "../data";
+import { useReducer } from "react";
 
-const keys = [
-  {
-    name: "esc",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "F1",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "F2",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "F3",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "F4",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "F5",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "F6",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "F7",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "F8",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "F9",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "F10",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "F11",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "F12",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "Prt",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "Ins",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "`",
-    className: "symbol ctrl",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "1",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "2",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "3",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "4",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "5",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "6",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "7",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "8",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "9",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "0",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "-",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "+",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "Backspace",
-    className: "delete lastitem",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "tab",
-    className: "tab",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "q",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "w",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "e",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "r",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "t",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "y",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "u",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "i",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "o",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "p",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "{",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "}",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "|",
-    className: "symbol lastitem",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "Caps Lock",
-    className: "capslock",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "a",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "s",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "d",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "f",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "g",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "h",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "j",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "k",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "l",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: ";",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "'",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "Enter",
-    className: "return lastitem",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "shift",
-    className: "left-shift",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "z",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "x",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "c",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "v",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "b",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "n",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "m",
-    className: "letter",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: ",",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: ".",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "/",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "Shift",
-    className: "right-shift lastitem",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "ctrl",
-    className: "ctrl",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "Fn",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "Win",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "Alt",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "",
-    className: "space lastitem",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "Alt",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "ctrl",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-];
+type stateInterface = {
+  keys: Array,
+  text: String,
+  keyLogger: Array,
+  specialKey: Object,
+};
 
-const key2s = [
-  {
-    name: "PgUp",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
+type typeInterface =
+  | "key"
+  | "shift"
+  | "numlock"
+  | "tab"
+  | "capslock"
+  | "space"
+  | "backspace"
+  | "action";
+
+type actionInterface = {
+  type: typeInterface,
+  payload: Number,
+};
+
+const stateInit = {
+  keys: keyData,
+  text: "",
+  keyLogger: [],
+  specialKey: {
+    shift: false,
+    numlock: false,
+    tab: false,
+    capslock: false,
+    backspace: false,
   },
-  {
-    name: "PgDn",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "Home",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "End",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "Num",
-    className: "num",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "/",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "*",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "-",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "7",
-    className: "ctrl",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "8",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "9",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "+",
-    className: "symbol height",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "4",
-    className: "ctrl mt45",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "5",
-    className: "symbol mt45",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "6",
-    className: "symbol mt45",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "1",
-    className: "ctrl",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "2",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "3",
-    className: "symbol",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "Enter",
-    className: "symbol height",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: "0",
-    className: "ctrl mt45 wid",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-  {
-    name: ".",
-    className: "symbol mt45",
-    onClick: (e) => {
-      console.log(e.target.value);
-    },
-  },
-];
+};
+
+const numberRights = [...Array(12).keys()]
+  .map((i) => i + 83)
+  .filter((item) => item !== 86 && item !== 93);
+
+const textLogger = (old_text, new_key, specialKey) => {
+  if (specialKey.capslock) {
+    return `${old_text}${new_key.toUpperCase()}`;
+  }else if (specialKey.shift) {
+    return `${old_text}${new_key.toUpperCase()}`;
+  }
+  return `${old_text}${new_key}`;
+};
+
+const reducer = (state: stateInterface, action: actionInterface = "key") => {
+  let newkey = [...state.keys];
+  newkey = newkey.map((item) => ({ ...item, onDown: false }));
+  newkey[action.payload] = {
+    ...newkey[action.payload],
+    onDown: true,
+    pressed: true,
+  };
+  // xử lý numlock
+  if (
+    numberRights.includes(action.payload) &&
+    state.specialKey.numlock === false
+  ) {
+    return state;
+  }
+  switch (action.type) {
+    case "key":
+      return {
+        ...state,
+        keys: newkey,
+        text: textLogger(
+          state.text,
+          newkey[action.payload].name,
+          state.specialKey
+        ),
+        keyLogger: [newkey[action.payload].name, ...state.keyLogger],
+      };
+    case "action":
+      return {
+        ...state,
+        keys: newkey,
+        keyLogger: [newkey[action.payload].name, ...state.keyLogger],
+      };
+    case "capslock":
+      return {
+        ...state,
+        keys: newkey,
+        specialKey: {
+          ...state.specialKey,
+          capslock: !state.specialKey.capslock,
+        },
+        keyLogger: [newkey[action.payload].name, ...state.keyLogger],
+      };
+    case "shift":
+      return {
+        ...state,
+        keys: newkey,
+        specialKey: {
+          ...state.specialKey,
+          shift: !state.specialKey.shift,
+        },
+        keyLogger: [newkey[action.payload].name, ...state.keyLogger],
+      };
+    case "numlock":
+      return {
+        ...state,
+        keys: newkey,
+        specialKey: {
+          ...state.specialKey,
+          numlock: !state.specialKey.numlock,
+        },
+        keyLogger: [newkey[action.payload].name, ...state.keyLogger],
+      };
+
+    case "space":
+      return {
+        ...state,
+        keys: newkey,
+        text: `${state.text} `,
+        keyLogger: [newkey[action.payload].name, ...state.keyLogger],
+      };
+
+    case "tab":
+      return {
+        ...state,
+        keys: newkey,
+        text: `${state.text}\t`,
+        keyLogger: [newkey[action.payload].name, ...state.keyLogger],
+      };
+
+    case "enter":
+      return {
+        ...state,
+        keys: newkey,
+        text: `${state.text}\n`,
+        keyLogger: [newkey[action.payload].name, ...state.keyLogger],
+      };
+
+    case "backspace":
+      return {
+        ...state,
+        keys: newkey,
+        text: state.text.substring(0, state.text.length - 1),
+        keyLogger: [newkey[action.payload].name, ...state.keyLogger],
+      };
+    default:
+      return state;
+  }
+  // return state;
+};
 
 function Keyboard() {
+  const [data, payload] = useReducer(reducer, stateInit);
+
   return (
     <>
-      <textarea className="write" rows="6" cols="60"></textarea>
-      <ul className="keyboard">
-        {keys.map((item, index) => {
-          return <Key key={index} item={item} />;
+      <ul
+        style={{
+          display: "flex",
+          listStyle: "none",
+          gap: 3,
+        }}
+      >
+        {data?.keyLogger.map((key, index) => {
+          return <li key={`keylog-${index}`}> {key} </li>;
         })}
       </ul>
+      <textarea
+        className="write"
+        rows="6"
+        cols="60"
+        defaultValue={data.text}
+      ></textarea>
+      <ul className="keyboard">
+        {data?.keys
+          .filter((item) => (item.keyAddress === "left" ? item : null))
+          .map((item, index) => {
+            return (
+              <Key key={index} index={index} item={item} onPayload={payload} />
+            );
+          })}
+      </ul>
       <ul className="keyboard right">
-        {key2s.map((item, index) => {
-          return <Key key={index} item={item} />;
-        })}
+        {data?.keys
+          .filter((item) => (item.keyAddress === "right" ? item : null))
+          .map((item, index) => {
+            return (
+              <Key
+                key={index + 75}
+                index={index + 75}
+                item={item}
+                onPayload={payload}
+              />
+            );
+          })}
       </ul>
     </>
   );
